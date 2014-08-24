@@ -1,0 +1,10 @@
+{
+  "name": "nw-demo",
+  "main": "index.html",
+  "window": 
+  {
+    "title": "Cosmonaunt",
+    "toolbar": false,
+    "frame": true
+  }
+}
