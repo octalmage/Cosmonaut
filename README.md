@@ -1,6 +1,6 @@
 ![](https://i.cloudup.com/lcFLUM_Mob.png)
 
-Desktop application that helps you make a dynamic website static then upload it to a static host. 
+Cross platform desktop application that helps you make a dynamic website static.
 
 **Features:**
 * Search and replace
