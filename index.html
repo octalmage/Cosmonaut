@@ -8,24 +8,35 @@
 		background-color: #ffffff;
 		margin: 0px;
 		padding: 0px;
+		font-family: sans-serif;
 	}
 
-	#left
+	#top
 	{
 		position: fixed; 
 		left:0px;
-		bottom: 0px;
 		top:0px;
-		width:200px;
-		background-color: #F9F9F9;
+		height:200px;
+		width: 100%;
+		background-color: #D96B00;
+		color: #FFFFFF;
+		text-align: center;
+	}
+
+	#top h1
+	{
+  		margin-top:80px;
+  		font-size:48px;
+  		line-height: 2px;
 	}
 	#main
 	{
 		position: fixed;
-		left: 200px;
-		top: 0px;
+		top: 200px;
 		bottom: 0px;
 		right: 0px;
+		left: 0px;
+		padding:20px;
 
 	}
 
@@ -35,15 +46,29 @@
 		 -webkit-box-shadow: 0px 5px 0px 0px #ccc;
 	}
 </style>
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<script src="app.js"></script>
+
   </head>
   <body>
-  <div id="left">
-   <div>
-	<span>jason.stallin.gs</span>
-   </div>
+  <div id="top">
+   <h1>Cosmonaut</h1>
+   <p>Static site generator</p>
 </div>
+
+
+
     <div id="main">
-	
+	<h1>Generate</h1>
+	Domain:
+	<input type="text" id="sitename" placeholder="www.example.com"><br>
+	<button id="start">Download</button>
     </div>
+
+    <input style="display:none;" nwdirectory id="fileDialog" type="file" />
   </body>
 </html>
