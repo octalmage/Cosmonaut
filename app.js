@@ -1,6 +1,12 @@
 var gui = require('nw.gui'); 
 var win = gui.Window.get();
 
+var sys = require('sys')
+var exec = require('child_process').exec;
+function puts(error, stdout, stderr) { console.log("") }
+
+function done(error, stdout, stderr) { alert("Done!") }
+
 var mb = new gui.Menu({type:"menubar"});
 mb.createMacBuiltin("Cosmonaut");
 win.menu = mb;
@@ -22,6 +28,7 @@ function chooseFile(name)
     {
     	domain=$("#sitename").val();
       	destination=$(this).val();
+      	exec("bin/wget -P " + destination + " --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows --domains " + domain + " --no-parent " + domain, done);
     });
 
 	chooser.trigger('click');  
